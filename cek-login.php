@@ -15,6 +15,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
    
     if ($baris[2] == 'admin') {
         echo '<script>'.
+        'localStorage.setItem("status-login", "true");'.
         ' window.location.href="admin/dashboard.php";'.
         '</script>';
       }else{
@@ -22,18 +23,23 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         VALUES ('$date','$date','$baris[7]')";
         if ($mysqli->query($sql_user) === TRUE) {
             echo '<script>'.
-                    ' window.location.href="dashboard.php";'.
-                    '</script>';
-        
+            'localStorage.setItem("status-login", "true");'.
+            'window.location.href="dashboard.php";'.
+            '</script>';
+
         } else {
-            // echo $mysqli;
-            echo "<script>alert('Gagal login!');</script>";
+            echo '<script>'.
+            'localStorage.setItem("status-login", "true");'.
+            'window.location.href="dashboard.php";'.
+            '</script>';
         }
-      // echo  $_SESSION["id"];
        
     }
    }else{
-    echo 'Gagal Login...';
+    echo '<script>'.
+    'localStorage.setItem("status-login", "false");'.
+    'location.href="index.php";'.
+    '</script>';
   }
 }
 

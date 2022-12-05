@@ -3,7 +3,8 @@ session_start();
 include 'header.php';
 ?>
 <body>
- <br>
+  <br>
+<div class="notiflogin"></div>
 <div class="card bg-light" >
   <div class="card-header text-center">Information</div>
   <div class="card-body">
@@ -11,7 +12,10 @@ include 'header.php';
     <p class="card-text text-center">Content.....</p>
   </div>
 </div>
-
+<script src="../asset/js/alert.js"></script>
+<script>
+  Alertlogin();
+</script>
 </body>
 <?php
 include 'footer.php';
