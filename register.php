@@ -10,8 +10,7 @@
 <link rel="stylesheet" href="asset/css/register.css">
 
 <body>
-<section class="vh-100 bg-image" 
-  style="">
+<section class="vh-100 bg-image">
  
   <div class="mask d-flex align-items-center h-80 gradient-custom-3">
     <div class="container h-100">
