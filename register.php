@@ -109,20 +109,20 @@ if (isset($_POST["name"]) && isset($_POST["password"]) && isset($_POST["email"])
     $sql_user = "INSERT INTO user (name, username, password, email, address, gender, role)
     VALUES ('$name','$user','$pass', '$email', '$address', '$gender', '$role')";
   
-       if ($mysqli->query($sql_user) === TRUE) {
-           echo "<script>".
-           'window.location.href="register.php";'.
-           "localStorage.setItem('status-register', 'true');".
-           "</script>";
-       
-       } else {
-           echo "<script>".
-           "localStorage.setItem('status-register', 'false');".
-           "</script>";
-           
-       }
+        if ($mysqli->query($sql_user) === TRUE) {
+            echo "<script>".
+            'window.location.href="register.php";'.
+            "localStorage.setItem('status-register', 'true');".
+            "</script>";
+        
+        } else {
+            echo "<script>".
+            "localStorage.setItem('status-register', 'false');".
+            "</script>";
+            
+        }
 
           
-       }
+        }
 
 ?>
