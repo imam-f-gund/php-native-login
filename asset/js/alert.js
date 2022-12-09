@@ -51,9 +51,9 @@ function Alertregister(){
     }
     
     $('.close').click(function () {
-       
+    
         localStorage.removeItem("status-register");
-       
+    
     });
     
 }

@@ -3,14 +3,17 @@ session_start();
 include 'header.php';
 ?>
 <body>
-<br>
-<div class="notiflogin"></div>
-<div class="card bg-light justify-content-center" >
-  <div class="card-header text-center">Information</div>
-  <div class="card-body">
-    <h5 class="card-title text-center">Welcome <?php echo $_SESSION['user']; ?></h5>
-    <p class="card-text"></p>
+<div class="container d-flex align-items-center h-100">
+ <div class="container">
+  <div class="notiflogin mt-3"></div>
+  <div class="card bg-light justify-content-center" >
+    <div class="card-header text-center">Information</div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Welcome <?php echo $_SESSION['user']; ?></h5>
+      <p class="card-text text-center">Content...</p>
+    </div>
   </div>
+ </div>
 </div>
 <script src="asset/js/alert.js"></script>
 <script>

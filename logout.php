@@ -1,5 +1,6 @@
 <?php
+include_once 'index.php';
 session_start();
 session_destroy();
-header("location:index.php");
+header("location:$me");
 ?>

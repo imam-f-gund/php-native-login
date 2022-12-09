@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'db/koneksi.php';
+include 'index.php';
 $date = date("Y-m-d h:i:sa");
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $user =$_POST["username"];
@@ -24,13 +25,13 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         if ($mysqli->query($sql_user) === TRUE) {
             echo '<script>'.
             'localStorage.setItem("status-login", "true");'.
-            'window.location.href="dashboard.php";'.
+            'window.location.href="dashboard";'.
             '</script>';
 
         } else {
             echo '<script>'.
             'localStorage.setItem("status-login", "true");'.
-            'window.location.href="dashboard.php";'.
+            'window.location.href="dashboard";'.
             '</script>';
         }
        
@@ -38,7 +39,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
    }else{
     echo '<script>'.
     'localStorage.setItem("status-login", "false");'.
-    'location.href="index.php";'.
+    'window.location.href="login";'.
     '</script>';
   }
 }

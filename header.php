@@ -29,11 +29,12 @@
     <ul class="navbar-nav mr-auto">
     
     </ul>
-    <form class="form-inline my-2 my-lg-0" action='logout.php'>
-      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Logout</button>
-    </form>
+      <a href="logout"><button class="btn btn-outline-warning my-2 my-sm-0" type="button" id="logout">Logout</button></a>
   </div>
 </nav>
 <div>
-
- 
+<script type="text/javascript">
+  $('#logout').click(function(){
+    localStorage.removeItem("status-login");
+  });
+</script>
